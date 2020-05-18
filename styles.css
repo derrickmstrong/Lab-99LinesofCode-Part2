@@ -1,0 +1,18 @@
+body {
+  background-color: lavender;
+  color: aliceblue;
+}
+
+h1 {
+  color: purple;
+  padding: 1rem;
+}
+
+.friend {
+  background-color: #342983;
+  padding: 1rem;
+}
+
+.friend > h3 {
+  text-transform: uppercase;
+}
