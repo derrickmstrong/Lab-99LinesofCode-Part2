@@ -1,5 +1,9 @@
 const btn = document.createElement('button');
 btn.textContent = 'Sing!';
+btn.style.padding = '.5em 1.5em';
+btn.style.borderRadius = '5px';
+btn.style.fontSize = '1em';
+btn.style.margin = '0 3em 3em';
 document.body.appendChild(btn);
 
 btn.addEventListener('click', sing);
@@ -25,29 +29,22 @@ function sing() {
       chorus = 'code in the file'
     ) {
       for (let j = count; j > 0; j--) {
-        const para = document.createElement('p')
-        
+        const para = document.createElement('p');
+
         if (count === 2) {
-          para.textContent += 
-            `${count} ${refrain}s of ${chorus}, ${count} ${refrain}s of ${refrain2}; ${friend} ${prechorus}, ${
-              count - 1
-            } ${refrain} of ${chorus}`
-          ;
+          para.textContent += `${count} ${refrain}s of ${chorus}, ${count} ${refrain}s of ${refrain2}; ${friend} ${prechorus}, ${
+            count - 1
+          } ${refrain} of ${chorus}`;
           count--;
         } else if (count === 1) {
-          para.textContent +=
-            `${count} ${refrain} of ${chorus}, ${count} ${refrain} of ${refrain2}; ${friend} ${prechorus}, no more ${refrain}s of ${chorus}`
-          ;
+          para.textContent += `${count} ${refrain} of ${chorus}, ${count} ${refrain} of ${refrain2}; ${friend} ${prechorus}, no more ${refrain}s of ${chorus}`;
         } else {
-          para.textContent +=
-            `${count} ${refrain}s of ${chorus}, ${count} ${refrain}s of ${refrain2}; ${friend} ${prechorus}, ${
-              count - 1
-            } ${refrain}s of ${chorus}`
-          ;
+          para.textContent += `${count} ${refrain}s of ${chorus}, ${count} ${refrain}s of ${refrain2}; ${friend} ${prechorus}, ${
+            count - 1
+          } ${refrain}s of ${chorus}`;
           count--;
         }
-        div.appendChild(para)
-        document.body.appendChild(div)
+        div.appendChild(para);
       }
     }
 
